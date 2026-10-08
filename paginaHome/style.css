@@ -14,17 +14,20 @@
 
 header {
   background-color: var(--marromClaro);
-  height: 167px;
-  font-family: var(--fontDM)
+  height: 150px;
+  font-family: var(--fontDM);
+  border-bottom: var(--marromMedio) solid 2px;
 }
 
 .container_ger {
+  /* background-color: aqua; */
   max-width: 1200px;
   width: 95%;
+  margin: 0 auto;
 }
 
 .container_header {
-  background-color: aqua;
+  /* background-color: aqua; */
   display: flex;
   margin: 0 auto;
   align-items: center;
@@ -37,33 +40,125 @@ header {
 
 header a {
   text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+}
+
+.nav_header{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.nav_header a {
+  margin: 20px;
   color: #9a8b7e;
-  margin: 10px;
+  display: inline-block;
+  transition: transform 0.7s ease;
 }
 
 .box_busca {
   position: relative;
+  width: 500px;
+}
+
+.botao_entrar {
+  background-color: var(--marromEscuro);
+  color: var(--marromClaro);
+  padding: 15px 40px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: transform 0.7s ease-out;
 }
 
 .box_busca input {
+  max-width: 500px;
+  width: 95%;
   background-color: var(--marromMedio);
   border: none;
   padding: 20px;
   padding-left: 25px;
   padding-bottom: 5px;
-  border-bottom: solid 1px #a9a9a9;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 8px;
+  padding: 12px 16px 12px 40px;
+  font-family: var(--fontDM);
 }
 
 .box_busca svg {
-  width: 28px;
   position: absolute;
+  width: 28px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;
+  pointer-events: none;
   fill: #9a8b7e;
-  left: -3px;
-  top: 15px;
 }
 
 .box_busca input:focus {
   outline: none;
+}
+
+.nav_header a:hover {
+  color: var(--marromEscuro);
+  transform: scale(1.15);
+}
+
+.botao_entrar:hover {
+  transform: scale(1.15);
+  background-color: transparent;
+  border: var(--marromEscuro) 1px solid;
+  color: var(--marromEscuro);
+}
+
+/* ---------- BANNER ---------- */
+
+.banner_home {
+  background-color: var(--marromClaro);
+}
+
+.box_texto_banner {
+  /* background-color: aquamarine; */
+  font-family: var(--fontDM);
+  padding-top: 65px;
+  width: 550px;
+}
+
+.box_texto_banner span {
+  font-family: var(--fontLora);
+  font-size: 48px;
+
+}
+
+.box_texto_banner a{
+  
+}
+
+
+/* ---------- MEDIA --------- */
+
+@media screen and (max-width: 768px) {
+
+  .nav_header {
+    display: none;
+  }
+
+  .box_busca input {
+    font-size: 8px;
+  }
+
+  .box_busca svg {
+    height: 12px;
+  }
+
+  .botao_entrar {
+    padding: 7px 20px;
+    font-size: 10px;
+    border-radius: 8px;
+  }
+
+
+
 }
